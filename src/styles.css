@@ -1,133 +1,146 @@
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
-body {
-  background-color: #666;
-  font-family: 'Reenie Beanie', cursive;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background: #666;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .app {
-  max-width: 1200px;
-  margin: 20px auto;
+  width: 100%;
+  max-width: 800px;
   padding: 20px;
-  background-color: #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-  color: #111;
-  font-size: 48px;
+  color: #fff;
+  text-align: center;
   margin-bottom: 20px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
-input[type="text"],
-textarea {
+form input[type="text"],
+form textarea {
+  width: 100%;
   padding: 10px;
-  border-radius: 5px;
-  border: 2px solid #ccc;
-  background-color: #fff;
-  font-family: 'Reenie Beanie', cursive;
-  font-size: 20px;
-  width: 100%;
-  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-input[type="checkbox"] {
-  margin-right: 10px;
+form textarea {
+  resize: vertical;
+  height: 100px;
 }
 
-label {
-  display: flex;
-  align-items: center;
+form label {
+  display: block;
+  margin-bottom: 8px;
 }
 
-button {
-  padding: 10px 20px;
+form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+form button {
+  background-color: #EC7063;
+  color: #fff;
+  padding: 12px 20px;
   border: none;
-  border-radius: 5px;
-  background-color: #111;
-  color: white;
-  font-family: 'Reenie Beanie', cursive;
-  font-size: 20px;
+  border-radius: 4px;
   cursor: pointer;
-  width: 100%;
-  box-sizing: border-box;
+  font-size: 16px;
 }
 
-.note-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
+form button:hover {
+  background-color: #D35450;
 }
 
 .note {
-  background-color: #FFFFCC;
+  background: #FFFFCC;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
   position: relative;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.note.important {
-  background-color: #EC7063;
+.note:hover {
+  transform: rotate(4deg);
 }
 
 .note h3 {
-  margin-top: 0;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
+  color: #111;
 }
 
 .note p {
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .note button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
+  background-color: #EC7063;
+  color: #fff;
   border: none;
-  color: #333;
-  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.15s linear;
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 36px;
-  }
+.note button:hover {
+  background-color: #D35450;
+  transform: scale(1.1);
+}
 
-  form {
-    gap: 5px;
-  }
+.note.important {
+  background: #EC7063;
+  color: #fff;
+}
 
-  input[type="text"],
-  textarea,
-  button {
-    font-size: 16px;
-    padding: 8px;
-  }
 
-  .note-list {
-    grid-template-columns: 1fr;
-  }
+.filtro-container {
+  margin-bottom: 20px;
+}
 
-  .note h3 {
-    font-size: 20px;
-  }
+.filtro-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
 
-  .note p {
-    font-size: 16px;
-  }
+.filtro-input:focus {
+  outline: none;
+  border-color: #EC7063;
 }
