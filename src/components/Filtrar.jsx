@@ -1,12 +1,19 @@
 import React from 'react';
 
 const Filtrar = ({ setFiltro }) => {
+  const handleChange = (e) => {
+    setFiltro(e.target.value);
+  };
+
   return (
-    <input
-      type="text"
-      placeholder="Filtrar"
-      onChange={(e) => setFiltro(e.target.value)}
-    />
+    <div className="filtro-container">
+      <input
+        type="text"
+        placeholder="Filtrar por título"
+        onChange={handleChange}
+        className="filtro-input"
+      />
+    </div>
   );
 };
 
