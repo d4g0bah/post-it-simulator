@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+body {
+  background-color: #666;
+  font-family: 'Reenie Beanie', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #111;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #111;
+  color: white;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.note {
+  background-color: #FFFFCC;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.note.important {
+  background-color: #EC7063;
+}
+
+.note h3 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.note p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.note button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  form {
+    gap: 5px;
+  }
+
+  input[type="text"],
+  textarea,
+  button {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .note-list {
+    grid-template-columns: 1fr;
+  }
+
+  .note h3 {
+    font-size: 20px;
+  }
+
+  .note p {
+    font-size: 16px;
+  }
+}
