@@ -4,10 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Reenie Beanie", cursive;
 }
 
 body {
-  font-family: "Reenie Beanie", cursive;
   font-size: 16px;
   margin: 0;
   background: #666;
@@ -31,6 +31,7 @@ h1 {
 }
 
 form {
+  font-family: "Reenie Beanie", cursive;
   background: #fff;
   padding: 20px;
   border-radius: 8px;
