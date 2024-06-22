@@ -20,7 +20,7 @@ body {
 
 .app {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 20px;
 }
 
@@ -78,6 +78,7 @@ form button:hover {
 }
 
 .note {
+  width: 200px;
   background: #FFFFCC;
   padding: 20px;
   border-radius: 8px;
@@ -86,6 +87,8 @@ form button:hover {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .note:hover {
@@ -126,7 +129,6 @@ form button:hover {
   color: #fff;
 }
 
-
 .filtro-container {
   margin-bottom: 20px;
 }
@@ -144,4 +146,21 @@ form button:hover {
 .filtro-input:focus {
   outline: none;
   border-color: #EC7063;
+}
+
+
+.note[data-color="yellow"] {
+  background: #FFFFCC;
+}
+
+.note[data-color="red"] {
+  background: #ff6666;
+}
+
+.note[data-color="yellow"] {
+  background: #FFFFCC;
+}
+
+.note[data-color="red"] {
+  background: #ff6666;
 }
